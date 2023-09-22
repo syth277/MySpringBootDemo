@@ -27,9 +27,21 @@
 
     <build>
         <plugins>
+            <!-- Use the spring-boot-maven-plugin with 'repackage' goal to create a WAR file -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.5.4</version> <!-- Adjust to the latest Spring Boot version -->
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <packaging>war</packaging>
+                </configuration>
             </plugin>
         </plugins>
     </build>
